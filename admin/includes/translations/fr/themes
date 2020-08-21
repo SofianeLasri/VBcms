@@ -1,0 +1,3 @@
+<h1>Thèmes</h1>
+<p>Ici tu peux voir et appliquer les thèmes installés.<br>
+	Thème utilisé: <b><?=getParameters("theme")?></b></p>

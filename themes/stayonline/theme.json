@@ -1,0 +1,11 @@
+{
+  "name": "stayonline",
+  "showname": "Stay Online",
+  "version": "1.0",
+  "compatible": "1.1d",
+  "author": "SofianeLasri",
+  "description": "Reproduction d'un loading screen très connu.",
+  "index": "index.php",
+  "features": ["dynamicBackgrounds", "tips", "musics"],
+  "include": ""
+}

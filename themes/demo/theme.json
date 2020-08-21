@@ -1,0 +1,11 @@
+{
+  "name": "demo",
+  "showname": "Démo",
+  "version": "1.0",
+  "compatible": "1.1a",
+  "author": "SofianeLasri",
+  "description": "Ceci est le thème de démo, change pour un autre thème. ;)",
+  "index": "index.php",
+  "features": [],
+  "include": "assets/includes/customFeatures.php"
+}

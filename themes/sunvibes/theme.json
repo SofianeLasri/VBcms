@@ -1,0 +1,11 @@
+{
+  "name": "sunvibes",
+  "showname": "Sun Vibes",
+  "version": "1.0",
+  "compatible": "1.1c",
+  "author": "SofianeLasri",
+  "description": "Ressentez l'été, les plages et la chaleur. :D",
+  "index": "index.php",
+  "features": ["dynamicBackgrounds", "tips", "musics"],
+  "include": "assets/includes/customFeatures.php"
+}

@@ -1,0 +1,103 @@
+<div class="d-flex">
+	<?php include 'includes/sidebar.php'; ?>
+	<div class="page-content container-fluid">
+		<h1>Backgrounds images</h1>
+		<p>Here you can define the background images. Don't forget that the loading screen stylizes them all on its own.</p>
+
+		<?php
+		$count= count(json_decode(getParameters("backgroundImages")));
+
+		if($count > 0){?>
+			<div class="alert alert-success border-0 alert-dismissible">
+				<span class="font-weight-semibold"><?=$count?> images</span> where found.
+		    </div>
+		<?php } else { ?>
+			<div class="alert alert-danger border-0 alert-dismissible">
+				<span class="font-weight-semibold">Hep hep hep!</span> You haven't defined any images yet, watch out for the infinite loop!
+		    </div>
+		<?php }
+
+		if(isset($_POST['submit'])){
+			if(!empty($_POST['usedBackground'])) {
+				// Counting number of checked checkboxes.
+				$checked_count = count($_POST['usedBackground']);
+				echo ('<div class="alert alert-success" role="alert">You have selected '.$checked_count." images.</div> <br/>");
+				/*$truncate = $bdd->prepare('TRUNCATE TABLE backgroundImages');	
+				$truncate->execute();*/
+
+				$backgrounds = json_encode($_POST['usedBackground']);
+				$sql = "UPDATE settings SET value = ? WHERE parameter = 'backgroundImages'";
+				$bdd->prepare($sql)->execute([$backgrounds]);
+			}else{
+				echo '<div class="alert alert-danger" role="alert">You must choose at least 1 image</div>';
+			}	
+		}?>
+
+		<p>Background images <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#changeBackModal">Choose</button></p>
+
+		<!-- Modal -->
+		<div class="modal fade" id="changeBackModal" tabindex="-1" role="dialog" aria-labelledby="changeBackModalTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<form action="backgrounds.php" method="post">
+						<div class="modal-header">
+							<h5 class="modal-title" id="changeBackModalTitle">Choose background images</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+						<?php
+						$res=$bdd->query("SELECT * FROM gallery");
+						$result = $res->fetchAll();
+						$count= count($result);
+						$backgroundImages = json_decode(getParameters("backgroundImages"));
+						if($count > 0){
+							foreach( $result as $row ) {
+								if (in_array($row['1'], $backgroundImages)) {
+								    $checked = "checked";
+								} else {
+									$checked = "";
+								}
+								$find = strpos($row["1"], "http");
+								if ($find === false) {
+								    $picPath = (getParameters("siteUrl")."admin/upload/".$row["1"]);
+								} else{
+									$picPath = $row["1"];
+								}
+								echo ('<div class="gallery"><img src='.$picPath.'><input type="checkbox" name="usedBackground[]" value="'.$row['1'].'" '.$checked.'><label>Utiliser</label></div>');
+							}
+						} else {
+							echo "No image is added yet. :(";
+						}
+
+						
+						?>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" name="submit" class="btn btn-primary">Save</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<?php
+		if($count > 0){
+			$backgroundImages = json_decode(getParameters("backgroundImages"));
+			echo ('<div class="gallery2 d-flex flex-wrap">');
+			foreach( $backgroundImages as $row ) {
+				$find = strpos($row["1"], "http");
+				if ($find === false) {
+				     $picPath = (getParameters("siteUrl")."admin/upload/".$row);
+				} else{
+					$picPath = $row;
+				}
+				echo ('<div class="d-flex flex-column"><img src='.$picPath.'></div>');
+			}
+			echo ('</div>');
+		} 
+		?>
+	</div>
+</div>

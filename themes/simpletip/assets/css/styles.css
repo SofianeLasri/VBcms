@@ -1,0 +1,116 @@
+@font-face {font-family: "DINNextLTPro-Condensed";
+  src: url("fonts/13ba9c94a7f164d315c9044db6d513ef.eot"); /* IE9*/
+  src: url("fonts/13ba9c94a7f164d315c9044db6d513ef.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.woff") format("woff"), /* chrome、firefox */
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.svg#DINNextLTPro-Condensed") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "DINNextLTPro-MediumCond";
+  src: url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.eot"); /* IE9*/
+  src: url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.woff") format("woff"), /* chrome、firefox */
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.svg#DINNextLTPro-MediumCond") format("svg"); /* iOS 4.1- */
+}
+body{
+	background-color: black;
+}
+.background{
+	background-size: cover;
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	z-index: -1;
+}
+
+.serverLogo{
+	position: fixed;
+	width: 20%;
+	left: 0;
+	right: 0;
+	top: 5%;
+	margin: auto;
+}
+
+.rightBottom{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.gmodLoadingBar{
+	width: 400px;
+	height: 66px;
+	margin: 10px;
+	background-color: #6f7277;
+}
+
+.bottomContent{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 10em;
+	margin-left: -0.5%;
+	border-style: solid;
+	border-bottom-width: 0;
+    border-top-width: 8px;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.postText{
+	margin-left: 1em;
+	max-width: 75%;
+}
+.postText h1{
+	color: white;
+	font-family: "DINNextLTPro-MediumCond";
+	font-size: 2.5em;
+	font-weight: 400;
+
+	margin-top: -1.2em;
+	text-transform: uppercase;
+}
+.postText p{
+	color: white;
+	font-family: "DINNextLTPro-Condensed";
+	font-size: 1.3em;
+
+	margin-top: -0.5em;
+}
+
+.leftInfos{
+	position: fixed;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 3%;
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+.leftInfos img{
+	height: 56px;
+}
+
+.serverInfo{
+	width: auto;
+	height: 64px;
+	color: white;
+	font-family: "DINNextLTPro-Condensed";
+	padding-left: 32px;
+	padding-right: 32px;
+	border-radius: 32px;
+	margin-top: 1em;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.serverInfo p{
+	font-size: 36px;
+}

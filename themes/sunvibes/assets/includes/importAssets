@@ -1,0 +1,26 @@
+<?php
+if (isset($_POST["submit"])) {
+	$files = ["https://i.imgur.com/UxpwCmzg.jpg", "https://i.imgur.com/T3hyzyF.jpg", "https://i.imgur.com/6wGbZWt.jpg", "https://i.imgur.com/WmozRr7.jpg", "https://i.imgur.com/qJ02IDc.jpg", "https://i.imgur.com/cSpuR7y.jpg", "https://i.imgur.com/YQP6F5a.jpg"];
+	$filesnames = array();
+	foreach ($files as $fileurl) {
+		uploadfiles($fileurl);
+		array_push($filesnames, str_replace("https://i.imgur.com/", "", $fileurl));
+		$sql = "UPDATE settings SET value = ? WHERE parameter = 'backgroundImages'";
+		$bdd->prepare($sql)->execute([json_encode($filesnames)]);
+	}
+	//Actualisation de la page
+	header('Location: ?p=importAssets&success');
+}
+?>
+<div class="page-content container-fluid">
+    <h1>Importer les assets du thème</h1>
+    <p>Ici tu peux importer les images de fond du thème. ^^</p>
+    <?php
+	if (isset($_GET["success"])) {
+		echo ('<div class="alert alert-success" role="alert">Images de fond importées avec succès!</div>');
+	}
+	?>
+    <form method="post" action="">
+		<button type="submit" name="submit" class="btn btn-success my-2">Importer</button>
+	</form>
+</div>

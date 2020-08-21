@@ -1,0 +1,6 @@
+<h1>Welcome to VBcms!</h1>
+<p>Thanks for installing VBcms. <i class="fas fa-heart"></i><br>
+	To start, choose a theme and upload images via the <b>Gallery</b> page, then go to <b>General settings</b> to set the background images. Don't forget to create a multitude of <b>tips</b> so that the player doesn't have to see the same one several times.<i class="far fa-smile-wink"></i></p>
+<p>If you have any questions or find a bug, don't hesitate to let me know. I will correct the problem as soon as possible.<br>
+Remember to take a look at the <a href="https://vbcms.sl-projects.com/doc-index.php">Panel Documentation</a>. ^^</p>
+<p><b>Loading screen link:</b> <?=getParameters("siteUrl")?>?ststeamid=%s</p>

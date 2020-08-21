@@ -1,0 +1,52 @@
+<?php
+if (isset($_POST["submit"])) {
+	//Modification des paramètres
+	$sql = "UPDATE settings SET value = ? WHERE parameter = 'stMainColor'";
+	$bdd->prepare($sql)->execute([$_POST["inputColor1"]]);
+	$sql = "UPDATE settings SET value = ? WHERE parameter = 'stSecondaryColor'";
+	$bdd->prepare($sql)->execute([$_POST["inputColor2"]]);
+	$sql = "UPDATE settings SET value = ? WHERE parameter = 'stThirdColor'";
+	$bdd->prepare($sql)->execute([$_POST["inputColor3"]]);
+	//Actualisation de la page
+	header('Location: ?p=themeSettings&success');
+}
+?>
+<div class="page-content container-fluid">
+    <h1>Paramètres du thème</h1>
+    <p>Ici tu peux changer les couleurs de l'écran de chargement.</p>
+    <?php
+	if (isset($_GET["success"])) {
+		echo ('<div class="alert alert-success" role="alert">Paramètres mis à jour avec succès!</div>');
+	}
+	?>
+    <form method="post" action="">
+	    <div class="form-group">
+			<div class="form-label-group">
+				<div class="d-flex">
+					<label for="inputColor1">Couleur #1</label>
+					<div class="ml-2" style="height: 28px;width: 60px; background-color: <?=getParameters("stMainColor")?>;"></div>
+				</div>
+				<input type="text" id="inputColor1" name="inputColor1" class="form-control" value="<?=getParameters("stMainColor")?>" placeholder="Couleur #1" required="required">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="form-label-group">
+				<div class="d-flex">
+					<label for="inputColor2">Couleur #2</label>
+					<div class="ml-2" style="height: 28px;width: 60px; background-color: <?=getParameters("stSecondaryColor")?>;"></div>
+				</div>
+				<input type="text" id="inputColor2" name="inputColor2" class="form-control" value="<?=getParameters("stSecondaryColor")?>" placeholder="Couleur #2" required="required">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="form-label-group">
+				<div class="d-flex">
+					<label for="inputColor3">Couleur #3</label>
+					<div class="ml-2" style="height: 28px;width: 60px; background-color: <?=getParameters("stThirdColor")?>;"></div>
+				</div>
+				<input type="text" id="inputColor3" name="inputColor3" class="form-control" value="<?=getParameters("stThirdColor")?>" placeholder="Couleur #3" required="required">
+			</div>
+		</div>
+		<button type="submit" name="submit" value="update" class="btn btn-success my-2">Mettre à jour</button>
+	</form>
+</div>

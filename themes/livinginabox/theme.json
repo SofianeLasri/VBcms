@@ -1,0 +1,11 @@
+{
+  "name": "livinginabox",
+  "showname": "Living in a cardboard box",
+  "version": "1.0",
+  "compatible": "1.1c",
+  "author": "SofianeLasri",
+  "description": "Parfois, une simple boite suffis largement.",
+  "index": "index.php",
+  "features": ["dynamicBackgrounds", "musics"],
+  "include": "assets/includes/customFeatures.php"
+}

@@ -1,0 +1,24 @@
+@font-face {font-family: "Refrigerator Delx W01 Bold";
+  src: url("../fonts/d664bf6951144f64f00f5b48099019d3.eot"); /* IE9*/
+  src: url("../fonts/d664bf6951144f64f00f5b48099019d3.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/d664bf6951144f64f00f5b48099019d3.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/d664bf6951144f64f00f5b48099019d3.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/d664bf6951144f64f00f5b48099019d3.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/d664bf6951144f64f00f5b48099019d3.svg#Refrigerator Delx W01 Bold") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "Refrigerator Delx W02 Reg";
+  src: url("../fonts/c0a349550b33f079982cf073e98cc67c.eot"); /* IE9*/
+  src: url("../fonts/c0a349550b33f079982cf073e98cc67c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/c0a349550b33f079982cf073e98cc67c.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/c0a349550b33f079982cf073e98cc67c.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/c0a349550b33f079982cf073e98cc67c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/c0a349550b33f079982cf073e98cc67c.svg#Refrigerator Delx W02 Reg") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "LTKaliber Bold";
+  src: url("../fonts/884a957ee2d127a16ff887ffec407798.eot"); /* IE9*/
+  src: url("../fonts/884a957ee2d127a16ff887ffec407798.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/884a957ee2d127a16ff887ffec407798.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/884a957ee2d127a16ff887ffec407798.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/884a957ee2d127a16ff887ffec407798.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/884a957ee2d127a16ff887ffec407798.svg#Linotype Kaliber Bold") format("svg"); /* iOS 4.1- */
+}

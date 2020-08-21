@@ -1,0 +1,14 @@
+.loadingPosts{
+	display: -webkit-box !important;
+	width: 30% !important;
+}
+.postText{
+	margin-top: 1em;
+	max-width: 100% !important;
+}
+
+@media (min-width: 1366px) {
+	#postImage{
+		width: 43em;
+	}
+}

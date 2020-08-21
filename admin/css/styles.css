@@ -1,0 +1,60 @@
+@import "fonts.css";
+:root{
+  --85-grey: #111111;
+  --10-grey: #ebebeb;
+  --main-blue2: #2C5FFF;
+  --light-blue: #40739e;
+}
+
+.bg-dark{
+	background-color: var(--85-grey) !important;
+}
+.bg-light{
+	background-color: #f8f9fa!important;
+}
+
+.navbar{
+	background: linear-gradient(90deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),url("../images/black-back-pattern.jpg");
+	background-size: auto 200%;
+}
+.loginCard{
+	max-width: 25rem;
+	background-color: var(--10-grey);
+}
+.loginCard h1,h2,h3,h4,h5{
+	font-family: "Refrigerator Delx W02 Reg";
+}
+.navbar-brand{
+	font-family: "LTKaliber Bold";
+	color: white !important;
+}
+.disconnectButton{
+	font-family: "Refrigerator Delx W02 Reg" !important;
+	color: white !important;
+}
+
+.sidebar{
+	margin-left: 0;
+	min-height: 100vh;
+}
+.sidebar .list-group {
+    width: 15rem;
+}
+.border-right {
+    border-right: 1px solid #dee2e6!important;
+}
+.page-content{
+	margin-top: 1rem;
+}
+.page-content h1,h2,h3{
+	font-family: "Refrigerator Delx W01 Bold";
+}
+
+.galleryImage{
+	background: linear-gradient(90deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),url("../images/black-back-pattern.jpg");
+}
+
+.fullwidthContainer{
+	width: 100%;
+	background-color: var(--10-grey);
+}

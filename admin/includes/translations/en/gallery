@@ -1,0 +1,25 @@
+<h1>Image galery</h1>
+<p>Quite useful to fill your loading screen. <i class="far fa-smile-wink"></i></p>
+<?php
+$res=$bdd->query("SELECT * FROM gallery");
+$count= count($res->fetchAll());
+if($count > 0){?>
+	<div class="alert alert-success border-0 alert-dismissible">
+		<span class="font-weight-semibold"><?=$count?> images</span> were found.
+    </div>
+<?php } else { ?>
+	<div class="alert alert-warning border-0 alert-dismissible">
+		<span class="font-weight-semibold">Hep hep hep!</span> You have no images sent yet.
+    </div>
+<?php }
+echo ('<form action="media-upload.php" class="dropzone"><div class="fallback"><input name="file" type="file" multiple /></div></form>');
+if($count > 0){
+	$res=$bdd->query("SELECT * FROM gallery ORDER BY id DESC");
+	$result = $res->fetchAll();
+	echo ('<div class="gallery d-flex flex-wrap">');
+	foreach( $result as $row ) {
+		echo ('<div class="d-flex flex-column"><img class="galleryImage" src=upload/'.$row['path'].'><a href="gallery.php?deleteMedia='.$row['id'].'"><i class="far fa-trash-alt"></i> Delete</a></div>');
+	}
+	echo ('</div>');
+} 
+?>

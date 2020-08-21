@@ -1,0 +1,11 @@
+{
+  "name": "doubleload",
+  "showname": "Double load",
+  "version": "1.0",
+  "compatible": "1.1d",
+  "author": "SofianeLasri",
+  "description": "Deux barre de chargement? Pourquoi pas!",
+  "index": "index.php",
+  "features": ["dynamicBackgrounds", "tips", "musics"],
+  "include": "assets/includes/customFeatures.php"
+}

@@ -1,0 +1,6 @@
+<h1>Bienvenu sur VBcms !</h1>
+<p>Merci d'avoir installé VBcms. <i class="fas fa-heart"></i><br>
+	Pour commencer, choisi un thème et envoie des images via la page <b>Gallerie</b>, puis va dans <b>Paramètres généraux</b> afin de définir les images de fond. N'oublies pas de créer une multitudes de <b>tips</b> de sorte à ce que le joueur n'ai pas à revoir le même plusieurs fois. <i class="far fa-smile-wink"></i></p>
+<p>Si tu as des questions ou que tu trouves un bug, n'hésites pas à me le faire savoir. Je corrigerai le problème dans les plus brefs délais.<br>
+	Pense à faire un tour sur la <a href="https://vbcms.sl-projects.com/doc-index.php">Documentation</a> du panel. ^^</p>
+<p><b>Lien de l'écran de chargement:</b> <?=getParameters("siteUrl")?>?ststeamid=%s</p>

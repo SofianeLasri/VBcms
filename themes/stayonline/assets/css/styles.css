@@ -1,0 +1,125 @@
+@font-face {font-family: "Kamerik 205 Bold";
+  src: url("fonts/585efefcd1042b6b7705b27073a916be.eot"); /* IE9*/
+  src: url("fonts/585efefcd1042b6b7705b27073a916be.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/585efefcd1042b6b7705b27073a916be.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/585efefcd1042b6b7705b27073a916be.woff") format("woff"), /* chrome、firefox */
+  url("fonts/585efefcd1042b6b7705b27073a916be.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/585efefcd1042b6b7705b27073a916be.svg#Kamerik 205 Bold") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "Kamerik 205 Book";
+  src: url("fonts/19d621e7fe650c7c82424fa2754767da.eot"); /* IE9*/
+  src: url("fonts/19d621e7fe650c7c82424fa2754767da.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/19d621e7fe650c7c82424fa2754767da.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/19d621e7fe650c7c82424fa2754767da.woff") format("woff"), /* chrome、firefox */
+  url("fonts/19d621e7fe650c7c82424fa2754767da.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/19d621e7fe650c7c82424fa2754767da.svg#Kamerik 205 Book") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "Kamerik 205 Thin";
+  src: url("fonts/0254a98dd4dd664268f86802ef75f4df.eot"); /* IE9*/
+  src: url("fonts/0254a98dd4dd664268f86802ef75f4df.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/0254a98dd4dd664268f86802ef75f4df.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/0254a98dd4dd664268f86802ef75f4df.woff") format("woff"), /* chrome、firefox */
+  url("fonts/0254a98dd4dd664268f86802ef75f4df.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/0254a98dd4dd664268f86802ef75f4df.svg#Kamerik 205 Thin") format("svg"); /* iOS 4.1- */
+}
+body{
+	background-color: black;
+}
+.background{
+	background-size: cover;
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	z-index: -1;
+}
+
+.serverLogo{
+	position: fixed;
+	width: 20%;
+	left: 2.5%;
+	bottom: 2.5%;
+	margin: auto;
+}
+
+.rightBottom{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.gmodLoadingBar{
+	width: 400px;
+	height: 66px;
+	margin: 10px;
+	background-color: #6f7277;
+}
+
+.content{
+	position: fixed;
+	width: 70%;
+	height: 60%;
+	background-color: rgba(0,0,0,0.75);
+	top: 0;
+	bottom: 0;
+	right: 7.4%;
+	margin: auto;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.postText{
+	margin-left: 1em;
+	width: 67%;
+	margin: 1em;
+	margin-top: -0.5em;
+}
+.postText h1{
+	color: white;
+	font-family: "Kamerik 205 Bold";
+	font-size: 3em;
+	font-weight: 400;
+}
+.postText p{
+	color: white;
+	font-family: "Kamerik 205 Book";
+	font-size: 1.3em;
+}
+.postImage{
+	height: 100%;
+	width: 33%;
+	background-size: cover;
+}
+.leftInfos{
+	position: fixed;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 3%;
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+.leftInfos img{
+	height: 56px;
+}
+
+.serverInfo{
+	width: auto;
+	height: 64px;
+	color: white;
+	font-family: "DINNextLTPro-Condensed";
+	padding-left: 32px;
+	padding-right: 32px;
+	border-radius: 32px;
+	margin-top: 1em;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.serverInfo p{
+	font-size: 36px;
+}

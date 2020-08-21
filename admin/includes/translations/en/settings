@@ -1,0 +1,66 @@
+<h1>Global settings</h1>
+<p>Here you can adjust the parameters of the loading screen.</p>
+<?php
+if (isset($_GET["success"])) {
+	echo ('<div class="alert alert-success" role="alert">Parameters updated successfully!</div>');
+}
+?>
+<form method="post" action="settings.php">
+	<div class="form-group">
+		<label>Language</label>
+		<select class="form-control" name="language">
+			<option value="fr">Français</option>
+			<option value="en">English (may be incomplete)</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputSiteName">Server logo</label>
+			<button type="button" class="btn btn-primary my-2" data-toggle="modal" data-target="#chooseServerLogo">Choisir</button>
+			<input type="text" id="serverLogo" name="serverLogo" class="form-control" value="<?=getParameters("serverLogo")?>" placeholder="Image link" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputSiteName">Name of the site</label>
+			<input type="text" id="inputSiteName" name="inputSiteName" class="form-control" value="<?=getParameters("siteName")?>" placeholder="Gordon's website" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputUrl">Site url <b>(with a / at the end)</b></label>
+			<input type="text" id="inputUrl" name="inputUrl" class="form-control" value="<?=getParameters("siteUrl")?>" placeholder="https://gordonfreeman.blackmesa.us/" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputServerIp">Server's IP <b>(IP:Port)</b></label>
+			<input type="text" id="inputServerIp" name="inputServerIp" class="form-control" value="<?=getParameters("serverIp")?>" placeholder="server's ip" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputSteamAPIkey">Steam API key <b>(voir <a href="https://steamcommunity.com/dev/apikey">ce lien</a>)</b></label>
+			<input type="text" id="inputSteamAPIkey" name="inputSteamAPIkey" class="form-control" value="<?=getParameters("steamAPIkey")?>" placeholder="Steam API key" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputTimeBackChange">Duration of the background image <b>(in ms)</b> <?php if (themeFeatures("dynamicBackgrounds") != true) {echo '<b>Non utilisé</b>';} ?></label>
+			<input type="text" id="inputTimeBackChange" name="inputTimeBackChange" class="form-control" value="<?=getParameters("timeBackChange")?>" placeholder="5000" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputPostChange">Duration of a tip <b>(in ms)</b> <?php if (themeFeatures("tips") != true) {echo '<b>Non utilisé</b>';} ?></label>
+			<input type="text" id="inputPostChange" name="inputPostChange" class="form-control" value="<?=getParameters("timePostChange")?>" placeholder="7000" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label-group">
+			<label for="inputMusic">Musics <b>(ogg format is prefered)</b> write in this form: <b>["chemin/vers/musique1.ogg","http://site.com/vers/musique2.ogg"]</b><?php if (themeFeatures("musics") != true) {echo '<br><b>Non used</b>';} ?></label>
+			<input type="text" id="inputMusic" name="inputMusic" class="form-control" value='<?=getParameters("musics")?>' required="required">
+		</div>
+	</div>
+	<button type="submit" name="submit" value="update" class="btn btn-success my-2">Update</button>
+</form>

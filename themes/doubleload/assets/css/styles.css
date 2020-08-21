@@ -1,0 +1,114 @@
+@font-face {font-family: "DINNextLTPro-Condensed";
+  src: url("fonts/13ba9c94a7f164d315c9044db6d513ef.eot"); /* IE9*/
+  src: url("fonts/13ba9c94a7f164d315c9044db6d513ef.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.woff") format("woff"), /* chrome、firefox */
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/13ba9c94a7f164d315c9044db6d513ef.svg#DINNextLTPro-Condensed") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "DINNextLTPro-MediumCond";
+  src: url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.eot"); /* IE9*/
+  src: url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.woff") format("woff"), /* chrome、firefox */
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/7f05d48f4a28cc6bd2f81faa3c7551f1.svg#DINNextLTPro-MediumCond") format("svg"); /* iOS 4.1- */
+}
+body{
+	background-color: black;
+}
+.background{
+	background-size: cover;
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	z-index: -1;
+}
+.legacyClipPath{
+	opacity: 0.749;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 50em;
+	height: 100%;
+	background-position: right;
+	background-size: cover;
+}
+
+.serverLogo{
+	position: fixed;
+	width: 20%;
+	left: 5%;
+	top: 5%;
+	margin: auto;
+}
+
+.rightBottom{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.gmodLoadingBar{
+	width: 400px;
+	height: 66px;
+	margin: 10px;
+	background-color: #6f7277;
+}
+
+.leftContent{
+	position: fixed;
+	top: 40%;
+	left: 0;
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+	margin-left: 3em;
+}
+.leftContent img{
+	height: 32px;
+}
+
+.serverInfo{
+	width: auto;
+	height: 64px;
+	color: white;
+	font-family: "DINNextLTPro-Condensed";
+	margin-top: 1em;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.serverInfo p{
+	font-size: 36px;
+}
+.loadingDiv{
+	color: white;
+	font-family: "DINNextLTPro-Condensed";	
+	font-size: 28px;
+	max-width: 13em;
+}
+.gmodLoadingBar2{
+	margin-top: -1em;
+	height: 8px;
+	width: 1%;
+}
+
+.postText{
+	margin-top: 2em;
+	max-width: 30%;
+}
+.postText h1{
+	color: white;
+	font-family: "DINNextLTPro-MediumCond";
+	font-size: 2.5em;
+	font-weight: 400;
+}
+.postText p{
+	color: white;
+	font-family: "DINNextLTPro-Condensed";
+	font-size: 1.3em;
+}

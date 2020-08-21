@@ -1,0 +1,93 @@
+@font-face {font-family: "COCOGOOSE";
+  src: url("../fonts/d14035f6b1afeabafbee4abb2ebf0fc6.eot"); /* IE9*/
+  src: url("../fonts/d14035f6b1afeabafbee4abb2ebf0fc6.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/d14035f6b1afeabafbee4abb2ebf0fc6.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/d14035f6b1afeabafbee4abb2ebf0fc6.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/d14035f6b1afeabafbee4abb2ebf0fc6.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/d14035f6b1afeabafbee4abb2ebf0fc6.svg#COCOGOOSE") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "DIN Next LT W01 Bold";
+  src: url("../fonts/25c8d3f21fac75e401fe67e5c3878ae4.eot"); /* IE9*/
+  src: url("../fonts/25c8d3f21fac75e401fe67e5c3878ae4.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/25c8d3f21fac75e401fe67e5c3878ae4.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/25c8d3f21fac75e401fe67e5c3878ae4.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/25c8d3f21fac75e401fe67e5c3878ae4.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/25c8d3f21fac75e401fe67e5c3878ae4.svg#DIN Next LT W01 Bold") format("svg"); /* iOS 4.1- */
+}
+body{
+	background-color: black;
+}
+.background{
+	background-size: cover;
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	z-index: -1;
+}
+.overlay{
+	background-image: url("../images/blue-background-effect-trans.png");
+	background-repeat: repeat;
+	-webkit-box-shadow: inset 0px 0px 90px 1px #000000;
+    -moz-box-shadow: inset 0px 0px 90px 1px #000000;
+    box-shadow: inset 0px 0px 90px 1px #000000;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+.topImage{
+	position: fixed;
+	width: 100%;
+	margin-top: -1%;
+	margin-left: -0.5%;
+}
+
+.serverLogo{
+	position: fixed;
+	width: 20%;
+	left: 5%;
+	top: 5%;
+}
+
+.rightBottom{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.gmodLoadingBar{
+	width: 400px;
+	height: 66px;
+	margin: 10px;
+	background-color: #6f7277;
+}
+.loadingPosts{
+	z-index: 10;
+	position:fixed;
+	bottom: 5%;
+	left:2.5%;
+	margin:auto;
+	display: flex;
+	flex-direction: row;
+}
+#postImage{
+	width: 45vw;
+}
+.postText{
+	margin-top: 1em;
+	max-width: 50%;
+}
+.postText h1{
+	color: white;
+	font-family: "DIN Next LT W01 Bold";
+	font-size: 2.4em;
+}
+.postText p{
+	color: white;
+	font-family: "COCOGOOSE";
+	font-size: auto;
+}

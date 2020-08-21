@@ -1,0 +1,28 @@
+.loadingPosts{
+	display: -webkit-box !important;
+	width: 30% !important;
+}
+.postText{
+	margin-top: 1em;
+	max-width: 100% !important;
+}
+
+@media (min-width: 1366px) {
+	#postImage{
+		width: 43em;
+	}
+}
+.postText{
+	margin-left: 1em;
+	max-width: 75%;
+	margin-top: -0.5em;
+}
+.serverInfo{
+	display: -webkit-box !important
+}
+.serverInfo img{
+	margin-top: 4px;
+}
+.serverInfo p {
+	margin-top: 5px;
+}

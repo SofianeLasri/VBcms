@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap');
+body{
+	background-color: black;
+}
+.background{
+	background-size: cover;
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	z-index: -1;
+}
+
+.serverLogo{
+	position: fixed;
+	width: 20%;
+	left: 0;
+	right: 0;
+	top: 5%;
+	margin: auto;
+}
+
+.carboardbox{
+	height: 30em;
+	width: 30em;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 20px;
+	text-align: center;
+}
+.topCBB{
+	height: 2.5em;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 1.8em;
+}
+.topCBB a{
+	margin-left: 0.5em;
+	line-height: 2.5em;
+}
+.playerProfilPic{
+	height: 10em;
+	width: 10em;
+	border-radius: 50%;
+	background-size: cover;
+	margin: 1em auto;
+	border: 4px solid;
+}
+.playerName{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 1.8em;
+	margin-top: -0.1em;
+}
+.serverInfos{
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+}
+.leftPart{
+	width: 20%;
+	text-align: left;
+}
+.leftPart img{
+	width: 32px;
+}
+.rightPart{
+	width: 80%;
+	text-align: right;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 1.4em;
+}
