@@ -19,12 +19,17 @@ if (isset($_POST["submit"])) {
 	$bdd->prepare($sql)->execute([$_POST["inputMusic"]]);
 	$sql = "UPDATE settings SET value = ? WHERE parameter = 'serverLogo'";
 	$bdd->prepare($sql)->execute([$_POST["serverLogo"]]);
-	$sql = "UPDATE settings SET value = ? WHERE parameter = 'serverIp'";
-	$bdd->prepare($sql)->execute([$_POST["inputServerIp"]]);
-	$sql = "UPDATE settings SET value = ? WHERE parameter = 'steamAPIkey'";
-	$bdd->prepare($sql)->execute([$_POST["inputSteamAPIkey"]]);
 	$sql = "UPDATE settings SET value = ? WHERE parameter = 'language'";
 	$bdd->prepare($sql)->execute([$_POST["language"]]);
+
+	if (!empty($_POST["inputServerIp"])) {
+		$sql = "UPDATE settings SET value = ? WHERE parameter = 'serverIp'";
+		$bdd->prepare($sql)->execute([$_POST["inputServerIp"]]);
+	}
+	if (!empty($_POST["inputSteamAPIkey"])) {
+		$sql = "UPDATE settings SET value = ? WHERE parameter = 'steamAPIkey'";
+		$bdd->prepare($sql)->execute([$_POST["inputSteamAPIkey"]]);
+	}
 
 	//Actualisation de la page
 	header('Location: settings.php?success');

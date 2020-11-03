@@ -35,13 +35,13 @@ if (isset($_GET["success"])) {
 	<div class="form-group">
 		<div class="form-label-group">
 			<label for="inputServerIp">Server's IP <b>(IP:Port)</b></label>
-			<input type="text" id="inputServerIp" name="inputServerIp" class="form-control" value="<?=getParameters("serverIp")?>" placeholder="server's ip" required="required">
+			<input type="text" id="inputServerIp" name="inputServerIp" class="form-control" value="<?=getParameters("serverIp")?>" placeholder="server's ip">
 		</div>
 	</div>
 	<div class="form-group">
 		<div class="form-label-group">
 			<label for="inputSteamAPIkey">Steam API key <b>(voir <a href="https://steamcommunity.com/dev/apikey">ce lien</a>)</b></label>
-			<input type="text" id="inputSteamAPIkey" name="inputSteamAPIkey" class="form-control" value="<?=getParameters("steamAPIkey")?>" placeholder="Steam API key" required="required">
+			<input type="text" id="inputSteamAPIkey" name="inputSteamAPIkey" class="form-control" value="<?=getParameters("steamAPIkey")?>" placeholder="Steam API key">
 		</div>
 	</div>
 	<div class="form-group">

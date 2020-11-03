@@ -22,7 +22,7 @@ include 'includes/constants.php';
 		<div class="page-content container-fluid">
 			<img width="100px" src="images/vbcms-logo.png">
 			<h1><?php if(getParameters("language") == "fr"){echo "Mettre à jour VBcms";}elseif (getParameters("language") == "en") {echo "Update VBcms";} ?></h1>
-			<p>Réfère-toi à la <a href="https://vbcms.sl-projects.com/doc-update.php">documentation</a> pour mettre à jour.<br>
+			<p>Réfère-toi à la <a href="https://vbcms.net/doc-update.php">documentation</a> pour mettre à jour.<br>
 			<b>v<?=getParameters("version")?></b> par <a href="https://sl-projects.com/">SofianeLasri</a></p>
 
 			
@@ -35,7 +35,7 @@ include 'includes/constants.php';
 					<h1>Mise à jour <?=$newVInfo->version?></h1>
 					<h4 class='mt-n2'><?=$newVDate->format('Y/m/d')?></h4>
 					<p><?=$newVInfo->changelog?></p>
-					<br><a href="https://vbcms.sl-projects.com/update.php?ver=<?=getParameters("version")?>" target="_blank">En savoir plus</a>
+					<br><a href="https://vbcms.net/update.php?ver=<?=getParameters("version")?>" target="_blank">En savoir plus</a>
 				</div>
 				<div class="align-self-center">
 					<h5>À extraire à la racine!</h5>
@@ -49,7 +49,7 @@ include 'includes/constants.php';
 				echo "<br><br><h2>Version actuelle | ".getParameters("version")."</h2>";
 				echo "<h4 class='mt-n2'>".$currentVDate->format('Y/m/d')."</h4>";
 				echo ($currentVInfo->changelog);
-				echo "<br><a href='https://vbcms.sl-projects.com/update.php?ver=".getParameters("version")."' target='_blank'>En savoir plus</a>";
+				echo "<br><a href='https://vbcms.net/update.php?ver=".getParameters("version")."' target='_blank'>En savoir plus</a>";
 
 			} else {
 				echo "Vous disposez d'une version non officielle. :/";

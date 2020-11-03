@@ -1,13 +1,13 @@
 <?php
 $format = 'Y-m-d H:i:s';
 
-$currentVJSON = file_get_contents('https://vbcms.sl-projects.com/getupdate.php?version='.getParameters("version"));
+$currentVJSON = file_get_contents('https://vbcms.net/getupdate.php?version='.getParameters("version"));
 if ($currentVJSON != "false") {
 	$currentVInfo = json_decode($currentVJSON);
 	$currentVDate = $currentVInfo->date;
 	$currentVDate = DateTime::createFromFormat($format, $currentVDate);
 
-	$newVJSON = file_get_contents('https://vbcms.sl-projects.com/getupdate.php?lastest');
+	$newVJSON = file_get_contents('https://vbcms.net/getupdate.php?lastest');
 	$newVInfo = json_decode($newVJSON);
 	$newVDate = $newVInfo->date;
 	$newVDate = DateTime::createFromFormat($format, $newVDate);

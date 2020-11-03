@@ -4,7 +4,7 @@
   "version": "1.0",
   "compatible": "1.1d",
   "author": "SofianeLasri",
-  "description": "Deux barre de chargement? Pourquoi pas!",
+  "description": "Deux barre de chargement? Pourquoi pas! <b>*</b>",
   "index": "index.php",
   "features": ["dynamicBackgrounds", "tips", "musics"],
   "include": "assets/includes/customFeatures.php"

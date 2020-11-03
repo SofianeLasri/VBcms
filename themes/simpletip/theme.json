@@ -4,7 +4,7 @@
   "version": "1.0",
   "compatible": "1.1c",
   "author": "SofianeLasri",
-  "description": "Pourquoi se compliquer la vie? Un simple design suffis amplement. :D",
+  "description": "Pourquoi se compliquer la vie? Un simple design suffis amplement. :D <b>*</b>",
   "index": "index.php",
   "features": ["dynamicBackgrounds", "tips", "musics"],
   "include": "assets/includes/customFeatures.php"

@@ -1,3 +1,3 @@
 <h1>Thèmes</h1>
-<p>Ici tu peux voir et appliquer les thèmes installés.<br>
+<p>Ici tu peux voir et appliquer les thèmes installés. <b>Les thèmes avec * nécessites d'avoir la clé steam API et l'IP du serveur de configuré.</b><br>
 	Thème utilisé: <b><?=getParameters("theme")?></b></p>

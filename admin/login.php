@@ -24,7 +24,7 @@ if (isset($_POST["inputUser"]) AND ($installed == false)) {
 	$bdduser_str = var_export($_POST["inputBddUser"], true);
 	$bddpass_str = var_export($_POST["inputBddPass"], true);
 	$bddname_str = var_export($_POST["inputBddName"], true);
-	$var = ("<?php\n".'$bddHost = '.$bddhost_str.";\n".'$bddUser = '.$bdduser_str.";\n".'$bddMdp = '.$bddpass_str.";\n".'$bddName = '.$bddname_str.";\n\n".'$installed = true;'."\n?>");
+	$var = ("<?php\n".'$bddHost = '.$bddhost_str.";\n".'$bddUser = '.$bdduser_str.";\n".'$bddMdp = '.$bddpass_str.";\n".'$bddName = '.$bddname_str.";\n\n".'$installed = true;'."\n\n".'error_reporting(0); //désactive les messages derreur'."\n?>");
 	file_put_contents('includes/config.php', $var);
 	include 'includes/bdd.php';
 
@@ -41,14 +41,14 @@ if (isset($_POST["inputUser"]) AND ($installed == false)) {
 	$bdd->prepare($sql)->execute([NULL, $_POST["inputUser"], $hashed_password]);
 
 	$sql = "INSERT INTO settings (parameter, value) VALUES ('siteName', ?), ('siteUrl', ?), ('timeBackChange', ?), ('timePostChange', ?), ('musics', ?), ('backgroundImages', ?), ('version', ?), ('theme', ?), ('themePath', ?), ('themeInclude', ?), ('serverLogo', ?), ('serverIp', ?), ('steamAPIkey', ?), ('language', ?)";
-	$bdd->prepare($sql)->execute([$_POST["inputSiteName"], $_POST["inputUrl"], 5000, 7000, "[]", "[]", "1.2c", "demo", "../themes/demo/theme.json", "", "", $_POST["inputServerIp"], $_POST["inputSteamAPIkey"], $_POST["language"]]);
+	$bdd->prepare($sql)->execute([$_POST["inputSiteName"], $_POST["inputUrl"], 5000, 7000, "[]", "[]", "1.2d", "demo", "../themes/demo/theme.json", "", "", $_POST["inputServerIp"], $_POST["inputSteamAPIkey"], $_POST["language"]]);
 
 	header('Location: login.php');
 } elseif (isset($_POST["inputUser"]) AND ($installed == true)) {
 	include 'includes/constants.php';
-	if (getParameters("version") != "1.2c") {
+	if (getParameters("version") != "1.2d") {
 		$sql = "UPDATE settings SET value = ? WHERE parameter = 'version'";
-		$bdd->prepare($sql)->execute(["1.2c"]);
+		$bdd->prepare($sql)->execute(["1.2d"]);
 	}
 	$res=$bdd->query("SELECT * FROM users WHERE name = '".$_POST["inputUser"]."'");
 	$result = $res->fetch();
@@ -124,7 +124,7 @@ if (isset($_POST["inputUser"]) AND ($installed == false)) {
 				<div class="form-group">
 					<div class="form-label-group">
 						<label for="inputBddName">Nom de la base</label>
-						<input type="text" id="inputBddName" name="inputBddName" class="form-control" value="<?=$bddName?>" placeholder="bdd_user" required="required" autofocus="autofocus">
+						<input type="text" id="inputBddName" name="inputBddName" class="form-control" value="<?=$bddName?>" placeholder="bdd_name" required="required" autofocus="autofocus">
 					</div>
 				</div>
 				<div class="form-group">
