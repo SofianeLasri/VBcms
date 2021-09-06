@@ -1,3 +1,4 @@
+Note: C'est pas ouf en fait, je bosse sur son remplaçant dpeuis septembre 2020... x)
 # VBcms
 VBcms est un panel intuitif qui vous facilitera la vie dans la création de votre loading screen.
 
